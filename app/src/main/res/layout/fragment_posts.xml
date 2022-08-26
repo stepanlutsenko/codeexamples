@@ -10,7 +10,7 @@
 
         <variable
             name="viewHolderFactory"
-            type="com.lustgr.codeexamples.commom.ui.adapter.ViewHolderFactory" />
+            type="com.lustgr.common.ui.adapter.ViewHolderFactory" />
     </data>
 
 

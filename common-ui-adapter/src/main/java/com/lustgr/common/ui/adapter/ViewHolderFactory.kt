@@ -1,4 +1,4 @@
-package com.lustgr.codeexamples.commom.ui.adapter
+package com.lustgr.common.ui.adapter
 
 import android.view.ViewGroup
 

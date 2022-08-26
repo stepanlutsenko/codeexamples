@@ -1,11 +1,8 @@
-package com.lustgr.codeexamples.commom.ui.bindings
+package com.lustgr.common.ui.adapter
 
 import android.widget.TextView
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.lustgr.codeexamples.commom.ui.adapter.CommonAdapter
-import com.lustgr.codeexamples.commom.ui.adapter.CommonItemVm
-import com.lustgr.codeexamples.commom.ui.adapter.ViewHolderFactory
 
 @BindingAdapter("app:setItems", "app:viewHolderFactory")
 fun setItems(view: RecyclerView, items: List<CommonItemVm>, viewHolderFactory: ViewHolderFactory) {

@@ -1,6 +1,6 @@
 package com.lustgr.codeexamples.post.presentation
 
-import com.lustgr.codeexamples.commom.ui.adapter.CommonItemVm
+import com.lustgr.common.ui.adapter.CommonItemVm
 import com.lustgr.codeexamples.post.domain.Post
 
 class ImagePostItemVM(data: Post.Image) : CommonItemVm {
