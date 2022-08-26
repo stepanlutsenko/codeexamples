@@ -1,24 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-    <data>
-
-        <variable
-            name="vm"
-            type="com.lustgr.codeexamples.post.presentation.PostsScreenViewModel" />
-
-        <variable
-            name="viewHolderFactory"
-            type="com.lustgr.codeexamples.commom.ui.adapter.ViewHolderFactory" />
-    </data>
-
-
-    <androidx.recyclerview.widget.RecyclerView
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/main_root_fragment_container"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:setItems="@{vm.posts}"
-        app:viewHolderFactory="@{viewHolderFactory}"
-        />
-</layout>
+        android:layout_height="match_parent" />
+
+</FrameLayout>

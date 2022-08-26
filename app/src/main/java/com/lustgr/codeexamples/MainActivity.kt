@@ -2,23 +2,16 @@ package com.lustgr.codeexamples
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.lustgr.codeexamples.databinding.ActivityMainBinding
-import com.lustgr.codeexamples.post.presentation.PostViewHolderFactory
-import com.lustgr.codeexamples.post.presentation.PostsScreenViewModel
-import org.koin.androidx.viewmodel.ext.android.viewModel
+import com.lustgr.codeexamples.post.PostsFragment
+import org.koin.androidx.fragment.android.replace
 
 class MainActivity : AppCompatActivity() {
 
-    private val postsScreenViewModel: PostsScreenViewModel by viewModel()
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        ActivityMainBinding.inflate(layoutInflater).apply {
-            lifecycleOwner = this@MainActivity
-            vm = postsScreenViewModel
-            viewHolderFactory = PostViewHolderFactory()
-            setContentView(root)
-        }
+        setContentView(R.layout.activity_main)
+        supportFragmentManager.beginTransaction()
+            .replace<PostsFragment>(R.id.main_root_fragment_container)
+            .commitNow()
     }
 }
